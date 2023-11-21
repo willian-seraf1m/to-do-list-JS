@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  padding: 4rem;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background: rgb(41, 47, 83);
+}
+
+
+.app {
+  width: 40.7rem;
+  background: #fff;
+  padding: 3.2rem;
+  border-radius: .8rem;
+}
+
+.header h1 {
+  margin-bottom: 1.2rem;
+}
+
+.header .add-tasks-content {
+  background-color: rgba(238, 238, 238, 0.596);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+.header .add-tasks {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.header .btn-add {
+  padding: 1.2rem 1.8rem;
+  border: none;
+  background-color: rgb(255, 149, 0);
+  color: #fff;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.header .btn-add:hover {
+  padding: 1.2rem 2rem;
+}
+
+.app ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 1.2rem 1.6rem 1.2rem 5rem;
+  background: rgba(246, 246, 246, 0.739);
+  border-radius: .6rem;
+  margin-bottom: .8rem;
+  transition: .3s;
+  position: relative;
+}
+
+.app ul li::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgb(227, 225, 225);
+  left: 16px;
+  transition: background .3s;
+}
+
+.app ul li:hover {
+  box-shadow: 1px 1px 5px rgba(213, 213, 213, 0.734);
+}
+
+.app .btn-remove {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  transition: background .3s;
+  cursor: pointer;
+}
+
+.app .btn-remove:hover {
+  background: rgba(232, 232, 232, 0.834);
+  font-weight: bold;
+}
+
+ul .checked span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+ul li.checked::before {
+  background-color: rgb(76, 224, 130);
+  background-image: url(./assets/check-circle.svg);
+  background-position: center;
+  background-size: 100%;
+  border: none;
+}
